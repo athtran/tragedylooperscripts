@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+
   <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
@@ -21,30 +22,104 @@
     <%= f.text_field :description, class: "form-control" %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :cast %>
-    <%= f.text_field :cast, class: "form-control" %>
+  <div class="row">
+    <div class="col-xs-3">
+      <strong><center>Cast</center></strong>
+      <div class="form-inline">
+        <%= f.label :cast_1 %>
+        <%= f.text_field :cast_1, class: "form-control" %>
+        <%= f.label :cast_2 %>
+        <%= f.text_field :cast_2, class: "form-control" %>
+        <%= f.label :cast_3 %>
+        <%= f.text_field :cast_3, class: "form-control" %>
+        <%= f.label :cast_4 %>
+        <%= f.text_field :cast_4, class: "form-control" %>
+        <%= f.label :cast_5 %>
+        <%= f.text_field :cast_5, class: "form-control" %>
+        <%= f.label :cast_6 %>
+        <%= f.text_field :cast_6, class: "form-control" %>
+        <%= f.label :cast_7 %>
+        <%= f.text_field :cast_7, class: "form-control" %>
+        <%= f.label :cast_8 %>
+        <%= f.text_field :cast_8, class: "form-control" %>
+        <%= f.label :cast_9 %>
+        <%= f.text_field :cast_9, class: "form-control" %>
+        <%= f.label :cast_10 %>
+        <%= f.text_field :cast_10, class: "form-control" %>
+        <%= f.label :cast_11 %>
+        <%= f.text_field :cast_11, class: "form-control" %>
+        <%= f.label :cast_12 %>
+        <%= f.text_field :cast_12, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-xs-2">
+      <strong><center>Role</center></strong>
+      <div class="form">
+        <%= f.text_field :role_1, class: "form-control" %>
+        <%= f.text_field :role_2, class: "form-control" %>
+        <%= f.text_field :role_3, class: "form-control" %>
+        <%= f.text_field :role_4, class: "form-control" %>
+        <%= f.text_field :role_5, class: "form-control" %>
+        <%= f.text_field :role_6, class: "form-control" %>
+        <%= f.text_field :role_7, class: "form-control" %>
+        <%= f.text_field :role_8, class: "form-control" %>
+        <%= f.text_field :role_9, class: "form-control" %>
+        <%= f.text_field :role_10, class: "form-control" %>
+        <%= f.text_field :role_11, class: "form-control" %>
+        <%= f.text_field :role_12, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-xs-7">
+      <div class="form-group">
+        <%= f.label :main_plot %>
+        <%= f.text_field :main_plot, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :subplot_1 %>
+        <%= f.text_field :subplot_1, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :subplot_2 %>
+        <%= f.text_field :subplot_2, class: "form-control" %>
+      </div>
+          <div class="col-xs-5">
+      <strong><center>Incident</center></strong>
+      <div class="form-inline">
+        <%= f.label :day_1 %>
+        <%= f.text_field :day_1, class: "form-control" %>
+        <%= f.label :day_2 %>
+        <%= f.text_field :day_2, class: "form-control" %>
+        <%= f.label :day_3 %>
+        <%= f.text_field :day_3, class: "form-control" %>
+        <%= f.label :day_4 %>
+        <%= f.text_field :day_4, class: "form-control" %>
+        <%= f.label :day_5 %>
+        <%= f.text_field :day_5, class: "form-control" %>
+        <%= f.label :day_6 %>
+        <%= f.text_field :day_6, class: "form-control" %>
+        <%= f.label :day_7 %>
+        <%= f.text_field :day_7, class: "form-control" %>
+        <%= f.label :day_8 %>
+        <%= f.text_field :day_8, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <strong><center>Culprit</center></strong>
+      <div class="form">
+        <%= f.text_field :culprit_1, class: "form-control" %>
+        <%= f.text_field :culprit_2, class: "form-control" %>
+        <%= f.text_field :culprit_3, class: "form-control" %>
+        <%= f.text_field :culprit_4, class: "form-control" %>
+        <%= f.text_field :culprit_5, class: "form-control" %>
+        <%= f.text_field :culprit_6, class: "form-control" %>
+        <%= f.text_field :culprit_7, class: "form-control" %>
+        <%= f.text_field :culprit_8, class: "form-control" %>
+      </div>
+    </div>
+    </div>  
   </div>
 
-  <div class="form-group">
-    <%= f.label :incident %>
-    <%= f.text_field :incident, class: "form-control" %>
-  </div>
 
-  <div class="form-group">
-    <%= f.label :main_plot %>
-    <%= f.text_field :main_plot, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :subplot_1 %>
-    <%= f.text_field :subplot_1, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :subplot_2 %>
-    <%= f.text_field :subplot_2, class: "form-control" %>
-  </div>
 
   <div class="form-group">
     <%= f.label :tragedy_set %>
@@ -64,6 +139,16 @@
   <div class="form-group">
     <%= f.label :special_rule %>
     <%= f.text_field :special_rule, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :hints %>
+    <%= f.text_field :hints, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :victory_conditions %>
+    <%= f.text_field :victory_conditions, class: "form-control" %>
   </div>
 
   <div class="form-group">
