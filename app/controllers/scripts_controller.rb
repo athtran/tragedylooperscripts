@@ -1,5 +1,7 @@
 class ScriptsController < ApplicationController
   before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   respond_to :html
 
@@ -11,14 +13,14 @@ class ScriptsController < ApplicationController
   end
 
   def new
-    @script = Script.new
+    @script = current_user.scripts.build 
   end
 
   def edit
   end
 
   def create
-    @script = Script.new(script_params)
+    @script = current_user.scripts.build(script_params)
     if @script.save
         redirect_to @script, notice: 'Script was successfully created.'
     else
@@ -45,8 +47,13 @@ class ScriptsController < ApplicationController
       @script = Script.find(params[:id])
     end
 
+    def correct_user
+      @script = current_user.scripts.find_by(id: params[:id])
+      redirect_to scripts_path, notice: "Not authorized to edit this script" if @script.nil?
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def script_params
-      params.require(:script).permit(:title, :description)
+      params.require(:script).permit(:title, :description, :cast, :incident, :main_plot, :subplot_1, :subplot_2, :tragedy_set, :num_loops, :days_loop, :special_rule)
     end
 end

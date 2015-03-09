@@ -10,5 +10,52 @@
   <%= @script.description %>
 </p>
 
-<%= link_to 'Edit', edit_script_path(@script) %> |
+<p>
+  <strong>Cast:</strong>
+  <%= @script.cast %>
+</p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @script.incident %>
+</p>
+
+<p>
+  <strong>Main Plot:</strong>
+  <%= @script.main_plot %>
+</p>
+
+<p>
+  <strong>Subplot 1:</strong>
+  <%= @script.subplot_1 %>
+</p>
+
+<p>
+  <strong>Subplot 2:</strong>
+  <%= @script.subplot_2 %>
+</p>
+
+<p>
+  <strong>Tragedy Set:</strong>
+  <%= @script.tragedy_set %>
+</p>
+
+<p>
+  <strong>Number of Loops:</strong>
+  <%= @script.num_loops %>
+</p>
+
+<p>
+  <strong>Days per Loop:</strong>
+  <%= @script.days_loop %>
+</p>
+
+<p>
+  <strong>Special Rule:</strong>
+  <%= @script.special_rule %>
+</p>
+
+<% if @script.user == current_user %>
+  <%= link_to 'Edit', edit_script_path(@script) %>
+<% end %>
 <%= link_to 'Back', scripts_path %>
