@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20150309164852) do
     t.string   "subplot_1"
     t.string   "subplot_2"
     t.string   "tragedy_set"
-    t.integer  "num_loops"
-    t.integer  "days_loop"
+    t.string   "num_loops"
+    t.string   "days_loop"
     t.string   "special_rule"
   end
 
