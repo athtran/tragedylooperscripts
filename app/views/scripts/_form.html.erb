@@ -4,22 +4,23 @@
       <h2><%= pluralize(@script.errors.count, "error") %> prohibited this script from being saved:</h2>
 
       <ul>
-      <% @script.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @script.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
