@@ -1,7 +1,7 @@
 class ScriptsController < ApplicationController
   before_action :set_script, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show, :show2]
+  before_action :authenticate_user!, except: [:index, :show, :mastermind]
 
   respond_to :html
 
