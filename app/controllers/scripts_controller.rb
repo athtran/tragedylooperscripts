@@ -52,7 +52,7 @@ class ScriptsController < ApplicationController
     end
 
     def correct_user
-      if current_user.admin = false then
+      if current_user.admin == false then
         @script = current_user.scripts.find_by(id: params[:id])
         redirect_to scripts_path, notice: "Not authorized to edit this script" if @script.nil?
       end
