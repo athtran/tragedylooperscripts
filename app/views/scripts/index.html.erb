@@ -19,12 +19,17 @@
         <td><%= script.title %></td>
         <td><%= script.user.email if script.user %></td>
         <td><%= link_to 'Show', script %></td>
-
-        <% if script.user == current_user %>
-          <td><%= link_to 'Edit', edit_script_path(script) %></td>
-          <td><%= link_to 'Destroy', script, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <% if current_user.admin == true then%>
+            <td><%= link_to 'Edit', edit_script_path(script) %></td>
+            <td><%= link_to 'Destroy', script, method: :delete, data: { confirm: 'Are you sure?' } %></td>       
+          <% else %> 
+            <% if script.user == current_user %>
+              <td><%= link_to 'Edit', edit_script_path(script) %></td>
+              <td><%= link_to 'Destroy', script, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          <% end %>
         <% end %>
-
       </tr>
     <% end %>
   </tbody>

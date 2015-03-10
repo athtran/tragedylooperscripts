@@ -52,10 +52,11 @@ class ScriptsController < ApplicationController
     end
 
     def correct_user
-      @script = current_user.scripts.find_by(id: params[:id])
-      redirect_to scripts_path, notice: "Not authorized to edit this script" if @script.nil?
+      if current_user.admin = false then
+        @script = current_user.scripts.find_by(id: params[:id])
+        redirect_to scripts_path, notice: "Not authorized to edit this script" if @script.nil?
+      end
     end
-
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def script_params
