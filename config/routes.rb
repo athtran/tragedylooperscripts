@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :scripts
+  resources :scripts do
+    get 'mastermind', on: :member
+  end
 
   devise_for :users
   root 'scripts#index'
