@@ -236,12 +236,13 @@
   <p>
     <strong><%= comment.user.name %>:</strong>
     <%= comment.body %>
-
-    <% if current_user.admin == true then %>
-      <%= link_to 'Delete', [@script, comment], method: :delete, data: { confirm: 'Are you sure? '} %>
-    <% else %>
-      <% if comment.user == current_user %>
+    <% if user_signed_in? %>
+      <% if current_user.admin == true then %>
         <%= link_to 'Delete', [@script, comment], method: :delete, data: { confirm: 'Are you sure? '} %>
+      <% else %>
+        <% if comment.user == current_user %>
+          <%= link_to 'Delete', [@script, comment], method: :delete, data: { confirm: 'Are you sure? '} %>
+        <% end %>
       <% end %>
     <% end %>
   </p>
