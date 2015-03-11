@@ -17,7 +17,7 @@
     <% @scripts.each do |script| %>
       <tr>
         <td><%= script.title %></td>
-        <td><%= script.user.email if script.user %></td>
+        <td><%= script.user.name if script.user %></td>
         <td><%= link_to 'Show', script %></td>
         <% if user_signed_in? %>
           <% if current_user.admin == true then %>

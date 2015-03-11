@@ -228,3 +228,33 @@
 <% if @script.user == current_user %>
   <%= link_to 'Edit', edit_script_path(@script), class:"btn btn-primary" %>
 <% end %>
+
+
+<h2>Comments</h2>
+<% @script.comments.each do |comment| %>
+
+  <p>
+    <strong><%= comment.user.name %>:</strong>
+    <%= comment.body %>
+
+    <% if current_user.admin == true then %>
+      <%= link_to 'Delete', [@script, comment], method: :delete, data: { confirm: 'Are you sure? '} %>
+    <% else %>
+      <% if comment.user == current_user %>
+        <%= link_to 'Delete', [@script, comment], method: :delete, data: { confirm: 'Are you sure? '} %>
+      <% end %>
+    <% end %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_for([@script, @script.comments.build]) do |f| %>
+
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
