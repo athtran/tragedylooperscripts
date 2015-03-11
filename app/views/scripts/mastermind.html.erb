@@ -248,14 +248,16 @@
   </p>
 <% end %>
 
-<h2>Add a comment:</h2>
-<%= form_for([@script, @script.comments.build]) do |f| %>
+<% if user_signed_in? %>
+  <h2>Add a comment:</h2>
+  <%= form_for([@script, @script.comments.build]) do |f| %>
 
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.label :body %><br>
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
 <% end %>
