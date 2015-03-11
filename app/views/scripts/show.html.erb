@@ -1,3 +1,22 @@
+ <div class="pull-right">
+  <%= link_to 'Back', scripts_path, class: "btn btn-default" %>
+
+  <!-- Small modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Mastermind Information</button>
+
+  <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <p>The following page contains spoilers. Do not continue if you are playing the protagonist of this script.</p>
+          <center>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= link_to 'Continue', mastermind_script_path, class: "btn btn-primary" %>
+          </center>
+      </div>
+    </div>
+  </div>
+</div> 
+
 <div class="row">
   <div class="col-md-6">
 
@@ -96,20 +115,11 @@
 
 </div>
 
-<%= link_to 'Back', scripts_path, class: "btn btn-default" %>
 
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Mastermind Information</button>
+<% if (user_signed_in?) then %>
+  <% if (current_user.admin == true) or (@script.user == current_user) then %>
+    <%= link_to 'Edit', edit_script_path(@script), class: "btn btn-default"%>
+    <%= link_to 'Destroy', @script, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+  <% end %>
+<% end %>
 
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <p>The following page contains spoilers. Do not continue if you are playing the protagonist of this script.</p>
-        <center>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <%= link_to 'Continue', mastermind_script_path, class: "btn btn-primary" %>
-        </center>
-    </div>
-  </div>
-</div>
- 
