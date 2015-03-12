@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Tragedy Set</th>
       <th>Created By</th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @scripts.each do |script| %>
       <tr>
         <td><%= link_to script.title, script %></td>
+        <td><%= script.tragedy_set %></td>
         <td><%= script.user.name if script.user %></td>
         <% if user_signed_in? %>
           <% if current_user.admin == true then %>
