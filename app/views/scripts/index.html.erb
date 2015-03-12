@@ -1,4 +1,4 @@
-<%= render 'pages/home' unless user_signed_in? %>
+<%= render 'pages/home'%>
 
 <h1>Scripts</h1>
 
@@ -29,5 +29,5 @@
 <br>
 
 <% if user_signed_in? %>
-  <%= link_to 'New Script', new_script_path %>
+  <%= link_to 'New Script', new_script_path, class: "btn btn-primary btn-lg" %>
 <% end %>

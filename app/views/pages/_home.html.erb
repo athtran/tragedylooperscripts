@@ -1,8 +1,21 @@
-<div class="jumbotron center">
-  <h1>Tragedy Looper Custom Scripts</h1>
-  <p>
-    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-  </p>
-
+  
+<div class="container", background-color="red">
+	<div class="row">
+		<div class="col-md-6">
+	    <%= link_to image_tag("tragedylooper.gif")%>
+  	</div>
+  	<div class="col-md-6">
+  		<br>
+  		<h4>Welcome!</h4>
+  		<p>Tragedylooperscripts.com is dedicated to hosting custom scripts for Z-man's board game "Tragedy Looper".</p>
+  		<p>Tragedy looper is a time-loop deduction board game. A mastermind will unfold a mystery while the Protagonists try to figure out what is going on. The game comes with tools to help you build your own custom scripts. </p>
+  		<% unless user_signed_in? %>
+  		  <p>Sign up below to upload your own!</p>
+  		  <center>
+		  	  <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+			    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+		    </center>
+		  <% end %>
+  	</div>
+   </div>
 </div>
