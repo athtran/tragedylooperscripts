@@ -119,7 +119,7 @@ ActiveRecord::Schema.define(version: 20150312015858) do
     t.text     "hints_3"
     t.text     "hints_4"
     t.text     "hints_5"
-    t.string   "difficulty"
+    t.text     "difficulty"
     t.text     "victory_conditions_1"
     t.text     "victory_conditions_2"
     t.text     "victory_conditions_3"

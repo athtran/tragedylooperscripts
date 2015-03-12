@@ -5,7 +5,7 @@ class AddAdditionalHintsToScripts < ActiveRecord::Migration
     add_column :scripts, :hints_3, :text
     add_column :scripts, :hints_4, :text
     add_column :scripts, :hints_5, :text
-    add_column :scripts, :difficulty, :string
+    add_column :scripts, :difficulty, :text
     add_column :scripts, :victory_conditions_1, :text
     add_column :scripts, :victory_conditions_2, :text
     add_column :scripts, :victory_conditions_3, :text
