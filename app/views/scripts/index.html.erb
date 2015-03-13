@@ -19,7 +19,11 @@
         <td><%= link_to script.title, script %></td>
         <td><%= script.difficulty %></td>
         <td><%= script.tragedy_set %></td>
-        <td><%= script.user.name if script.user %></td>
+        <% if script.created_by %>
+          <td><%= script.created_by%></td>
+        <% else %>
+          <td><%= script.user.name if script.user %></td>
+        <% end %>
         <td><%= script.updated_at %></td>
         <% if user_signed_in? %>
           <% if current_user.admin == true then %>
