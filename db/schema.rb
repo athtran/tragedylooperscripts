@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313211810) do
+ActiveRecord::Schema.define(version: 20150312015858) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -125,7 +125,6 @@ ActiveRecord::Schema.define(version: 20150313211810) do
     t.string   "victory_conditions_3"
     t.string   "victory_conditions_4"
     t.string   "victory_conditions_5"
-    t.string   "created_by"
   end
 
   add_index "scripts", ["user_id"], name: "index_scripts_on_user_id"

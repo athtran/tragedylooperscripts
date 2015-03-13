@@ -8,7 +8,7 @@
       <th>Title</th>
       <th>Difficulty</th>
       <th>Tragedy Set</th>
-      <th>Created By</th>
+      <th>Posted By</th>
       <th>Last Updated</th>
     </tr>
   </thead>
@@ -19,11 +19,7 @@
         <td><%= link_to script.title, script %></td>
         <td><%= script.difficulty %></td>
         <td><%= script.tragedy_set %></td>
-        <% if script.created_by %>
-          <td><%= script.created_by%></td>
-        <% else %>
-          <td><%= script.user.name if script.user %></td>
-        <% end %>
+        <td><%= script.user.name if script.user %></td>
         <td><%= script.updated_at %></td>
         <% if user_signed_in? %>
           <% if current_user.admin == true then %>
