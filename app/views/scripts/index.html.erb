@@ -29,6 +29,8 @@
 
 <br>
 
-<% if user_signed_in? %>
-  <%= link_to 'New Script', new_script_path, class: "btn btn-primary btn-lg" %>
-<% end %>
+<div class="pull-right">
+  <% if user_signed_in? %>
+    <%= link_to 'New Script', new_script_path, class: "btn btn-primary btn-lg" %>
+  <% end %>
+</div>
