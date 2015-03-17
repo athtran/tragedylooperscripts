@@ -5,6 +5,12 @@
       <strong>Title:</strong>
       <%= @script.title %>
     </p>
+    <% if @script.created_by %>
+    <p>
+      <strong>Created by:</strong>
+      <%= @script.created_by %>
+    </p>
+    <% end %>
     <p>
       <strong>Tragedy Set:</strong>
       <%= @script.tragedy_set %>
