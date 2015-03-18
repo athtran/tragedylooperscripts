@@ -5,11 +5,11 @@
 <table class="table table-striped table-responsive">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Difficulty</th>
-      <th>Tragedy Set</th>
-      <th>Created By</th>
-      <th>Last Updated</th>
+      <th><%= sort_link @search, :title, "Title" %></th>
+      <th><%= sort_link @search, :difficuty, "Difficulty" %></th>
+      <th><%= sort_link @search, :tragedy_set, "Tragedy Set" %></th>
+      <th><%= sort_link @search, :created_by, "Created_by" %></th>
+      <th><%= sort_link @search, :updated_at, "Last Updated" %></th>
     </tr>
   </thead>
 

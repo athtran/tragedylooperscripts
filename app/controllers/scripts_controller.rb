@@ -6,7 +6,8 @@ class ScriptsController < ApplicationController
   respond_to :html
 
   def index
-    @scripts = Script.all
+    @search = Script.search(params[:q])
+    @scripts = @search.result
   end
 
   def show
