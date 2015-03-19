@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :scripts
   has_many :comments
+  has_many :tsets
 
   validates :name, presence: true
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150313213724) do
+ActiveRecord::Schema.define(version: 20150318183351) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -129,6 +129,28 @@ ActiveRecord::Schema.define(version: 20150313213724) do
   end
 
   add_index "scripts", ["user_id"], name: "index_scripts_on_user_id"
+
+  create_table "tragedy_sets", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "tragedy_sets", ["user_id"], name: "index_tragedy_sets_on_user_id"
+
+  create_table "tsets", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.string   "attachment_1_file_name"
+    t.string   "attachment_1_content_type"
+    t.integer  "attachment_1_file_size"
+    t.datetime "attachment_1_updated_at"
+  end
+
+  add_index "tsets", ["user_id"], name: "index_tsets_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false

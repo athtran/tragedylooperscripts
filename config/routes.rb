@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  resources :tsets
+
   resources :scripts do
     get 'mastermind', on: :member
     resources :comments

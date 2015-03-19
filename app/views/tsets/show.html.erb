@@ -1,0 +1,10 @@
+<%= @tset.attachment_1_file_name %>
+<%= link_to 'Download', @tset.attachment_1.url(:original, false) %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tset.title %>
+</p>
+
+<%= link_to 'Edit', edit_tset_path(@tset) %> |
+<%= link_to 'Back', tsets_path %>

@@ -1,0 +1,25 @@
+<%= form_for @tset, html: { multipart: true } do |f| %>
+  <% if @tset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tset.errors.count, "error") %> prohibited this tset from being saved:</h2>
+
+      <ul>
+      <% @tset.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :attachment_1 %>
+    <%= f.file_field :attachment_1, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
