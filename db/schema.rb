@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150318183351) do
+ActiveRecord::Schema.define(version: 20150326190408) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -148,6 +148,15 @@ ActiveRecord::Schema.define(version: 20150318183351) do
     t.string   "attachment_1_content_type"
     t.integer  "attachment_1_file_size"
     t.datetime "attachment_1_updated_at"
+    t.text     "description_1"
+    t.text     "description_2"
+    t.text     "description_3"
+    t.text     "description_4"
+    t.text     "description_5"
+    t.text     "description_6"
+    t.text     "description_7"
+    t.text     "description_8"
+    t.string   "created_by"
   end
 
   add_index "tsets", ["user_id"], name: "index_tsets_on_user_id"

@@ -54,6 +54,6 @@ class TsetsController < ApplicationController
     end
 
     def tset_params
-      params.require(:tset).permit(:title, :attachment_1)
+      params.require(:tset).permit(:title, :attachment_1, :description_1, :description_2, :description_3, :description_4, :description_5, :description_6, :description_7, :description_8, :created_by)
     end
 end

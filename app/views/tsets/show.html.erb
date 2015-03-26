@@ -1,10 +1,43 @@
-<%= @tset.attachment_1_file_name %>
-<%= link_to 'Download', @tset.attachment_1.url(:original, false) %>
 
+<div class="pull-right">
+	<%= link_to 'View Tragedy Set', @tset.attachment_1.url(:original, false), class: "btn btn-success" %>
+</div>
+<div>
 <p>
   <strong>Title:</strong>
   <%= @tset.title %>
 </p>
+<p>
+  <strong>Created By:</strong>
+  <%= @tset.created_by %>
+</p>
 
-<%= link_to 'Edit', edit_tset_path(@tset) %> |
-<%= link_to 'Back', tsets_path %>
+<p>
+	<strong>File name:</strong>
+	<%= @tset.attachment_1_file_name %>
+</p>
+
+<p>
+  <strong>Description:</strong><br>
+  <p><%= @tset.description_1 %></p>
+  <p><%= @tset.description_2 %></p>
+  <p><%= @tset.description_3 %></p>
+  <p><%= @tset.description_4 %></p>
+  <p><%= @tset.description_5 %></p>
+  <p><%= @tset.description_6 %></p>
+  <p><%= @tset.description_7 %></p>
+  <p><%= @tset.description_8 %></p>
+</p>
+
+</div>
+<hr>
+<% if (user_signed_in?) then %>
+  <% if (current_user.admin == true) or (@tset.user == current_user) then %>
+		<%= link_to 'Edit', edit_tset_path(@tset), class: "btn btn-default" %> 
+		<%= link_to 'Destroy', @tset, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+  <% end %>
+<% end %>
+
+<div class="pull-right">
+	<%= link_to 'Back', tsets_path, class: "btn btn-primary" %>
+</div>
