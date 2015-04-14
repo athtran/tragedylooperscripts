@@ -21,7 +21,7 @@
     </p>
     <p>
       <strong>Description:</strong>
-      <%= @script.description %>
+      <%= raw @script.description %>
     </p>
     <p>
       <strong>Main Plot:</strong>
@@ -45,23 +45,15 @@
     </p>
     <p>
       <strong>Hints for Mastermind:</strong><br>
-      <%= @script.hints_1 %><br>
-      <%= @script.hints_2 %><br>
-      <%= @script.hints_3 %><br>
-      <%= @script.hints_4 %><br>
-      <%= @script.hints_5 %>
+      <%= raw @script.hints_1 %>
     </p>
     <p>
       <strong>Victory Conditions for Mastermind:</strong><br>
-      <%= @script.victory_conditions_1 %><br>
-      <%= @script.victory_conditions_2 %><br>
-      <%= @script.victory_conditions_3 %><br>
-      <%= @script.victory_conditions_4 %><br>
-      <%= @script.victory_conditions_5 %>
+      <%= raw @script.victory_conditions_1 %>
     </p>
     <p>
-      <strong>Special Rule:</strong>
-      <%= @script.special_rule %>
+      <strong>Special Rule:</strong><br>
+      <%= raw @script.special_rule %>
     </p>
   </div>
 
