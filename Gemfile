@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '4.2.0'
+gem 'rails', '5.0.2'
+gem 'json', '>1.8.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -18,7 +19,7 @@ gem 'ckeditor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3', '< 1.4'
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -26,7 +27,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg'
+	gem 'pg', '~>0.20'
 	gem 'rails_12factor'
 end
 
