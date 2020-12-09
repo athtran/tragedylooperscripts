@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :casts
   resources :tsets
 
   resources :scripts do
