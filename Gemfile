@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.7.2"
 
 gem 'rails', '5.0.2'
 gem 'json', '>1.8.2'
@@ -27,7 +27,7 @@ group :development, :test do
 end
 
 group :production do
-	gem 'pg', '~>0.20'
+	gem 'pg'
 	gem 'rails_12factor'
 end
 
