@@ -10,7 +10,7 @@ class CastsController < ApplicationController
   # GET /casts/1
   # GET /casts/1.json
   def show
-    @cast = Case.find(params[:cast])
+    @cast = Cast.find(params[:id])
     @role = Cast.find(params[:role])
   end
 
@@ -66,7 +66,7 @@ class CastsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cast
-      @cast = Cast.find(params[:id])
+      @cast = Cast.find(params[:id, :script_id])
     end
 
     # Only allow a list of trusted parameters through.

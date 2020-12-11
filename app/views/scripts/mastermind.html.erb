@@ -141,89 +141,14 @@
         </tr>
       </thead>
       <tbody> 
-        <% if @script.cast_1? %> 
+      <% @cast.each do |item| %>
+        <% if item.script_id == @script.id && item.cast != ""%>
           <tr>
-            <td><%= @script.cast_1 %></td>
-            <td><%= @script.role_1 %></td>
+            <td><%= item.cast %></td>
+            <td><%= item.role %></td>
           </tr>
         <% end %>
-
-        <% if @script.cast_2? %> 
-        <tr>
-          <td><%= @script.cast_2 %></td>
-          <td><%= @script.role_2 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_3? %> 
-        <tr>
-          <td><%= @script.cast_3 %></td>
-          <td><%= @script.role_3 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_4? %>     
-        <tr>
-          <td><%= @script.cast_4 %></td>
-          <td><%= @script.role_4 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_5? %> 
-        <tr>
-          <td><%= @script.cast_5 %></td>
-          <td><%= @script.role_5 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_6? %> 
-        <tr>
-          <td><%= @script.cast_6 %></td>
-          <td><%= @script.role_6 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_7? %>    
-        <tr>
-          <td><%= @script.cast_7 %></td>
-          <td><%= @script.role_7 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_8? %> 
-        <tr>
-          <td><%= @script.cast_8 %></td>
-          <td><%= @script.role_8 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_9? %> 
-        <tr>
-          <td><%= @script.cast_9 %></td>
-          <td><%= @script.role_9 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_10? %> 
-        <tr>
-          <td><%= @script.cast_10 %></td>
-          <td><%= @script.role_10 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_11? %>     
-        <tr>
-          <td><%= @script.cast_11 %></td>
-          <td><%= @script.role_11 %></td>
-        </tr>
-        <% end %>
-
-        <% if @script.cast_12? %>     
-        <tr>
-          <td><%= @script.cast_12 %></td>
-          <td><%= @script.role_12 %></td>
-        </tr>
-        <% end %> 
+      <% end %>
 
       </tbody>
     </table>
