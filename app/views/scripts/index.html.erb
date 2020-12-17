@@ -35,6 +35,30 @@
   </tbody>
 </table>
 
+<div>
+   <ul class="pager pagination-sm">
+      <% pages = (Script.all.count / 10).ceil %>
+      <% prev = "btn btn-default previous " + (@page == 0 ? 'disabled' : '')%>
+      <% nex = "btn btn-default next " + (@page == pages ? 'disabled' : '')%>
+      <% curr = "btn btn-default disabled"%>
+
+      <li>
+          <%= link_to "<< Previous", scripts_path(page: (@page == 0 ? 0 : @page - 1)), class: prev%>
+      </li>
+    
+      <% (0..pages).each do |p| %>
+        <% if p == @page %>
+          <li><%= link_to p + 1, scripts_path(page: p), class: curr%></li>
+        <% else %>
+          <li><%= link_to p + 1, scripts_path(page: p) %></li>
+        <% end %>
+      <% end %>    
+
+      <li>
+        <%= link_to "Next >>", scripts_path(page: (@page == pages ? pages : @page + 1)), class: nex %>
+      </li>
+   </ul>
+</div>
 <br>
 
 <div class="pull-right">
