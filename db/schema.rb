@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20201209233943) do
+ActiveRecord::Schema.define(version: 20201214144246) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -77,30 +77,6 @@ ActiveRecord::Schema.define(version: 20201209233943) do
     t.string   "num_loops"
     t.string   "days_loop"
     t.string   "special_rule"
-    t.string   "cast_1"
-    t.string   "role_1"
-    t.string   "cast_2"
-    t.string   "role_2"
-    t.string   "cast_3"
-    t.string   "role_3"
-    t.string   "cast_4"
-    t.string   "role_4"
-    t.string   "cast_5"
-    t.string   "role_5"
-    t.string   "cast_6"
-    t.string   "role_6"
-    t.string   "cast_7"
-    t.string   "role_7"
-    t.string   "cast_8"
-    t.string   "role_8"
-    t.string   "cast_9"
-    t.string   "role_9"
-    t.string   "cast_10"
-    t.string   "role_10"
-    t.string   "cast_11"
-    t.string   "role_11"
-    t.string   "cast_12"
-    t.string   "role_12"
     t.string   "day_1"
     t.string   "culprit_1"
     t.string   "day_2"
