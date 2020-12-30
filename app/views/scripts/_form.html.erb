@@ -59,65 +59,72 @@
       </thead>
 
       <tbody>
-          <tr>
-            <td><p>Character 1</p></td>
-            <td><%= f.text_field :cast_1, class: "form-control" %></td>
-            <td><%= f.text_field :role_1, class: "form-control" %></td>
+        <tr>
+          <td><p>Character 1</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 2</p></td>
-            <td><%= f.text_field :cast_2, class: "form-control" %></td>
-            <td><%= f.text_field :role_2, class: "form-control" %></td>
+          <td><p>Character 2</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
+          </tr>
+          <td><p>Character 3</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 3</p></td>
-            <td><%= f.text_field :cast_3, class: "form-control" %></td>
-            <td><%= f.text_field :role_3, class: "form-control" %></td>
+          <td><p>Character 4</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
+          </tr>
+          <td><p>Character 5</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 4</p></td>
-            <td><%= f.text_field :cast_4, class: "form-control" %></td>
-            <td><%= f.text_field :role_4, class: "form-control" %></td>
+          <td><p>Character 6</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
+          </tr>
+          <td><p>Character 7</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 5</p></td>
-            <td><%= f.text_field :cast_5, class: "form-control" %></td>
-            <td><%= f.text_field :role_5, class: "form-control" %></td>
+          <td><p>Character 8</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
+          </tr>                
+          <td><p>Character 9</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 6</p></td>
-            <td><%= f.text_field :cast_6, class: "form-control" %></td>
-            <td><%= f.text_field :role_6, class: "form-control" %></td>
+          <td><p>Character 10</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
+          </tr>
+          <td><p>Character 11</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
           <tr>
-            <td><p>Character 7</p></td>
-            <td><%= f.text_field :cast_7, class: "form-control" %></td>
-            <td><%= f.text_field :role_7, class: "form-control" %></td>
-          </tr>
-          <tr>
-            <td><p>Character 8</p></td>
-            <td><%= f.text_field :cast_8, class: "form-control" %></td>
-            <td><%= f.text_field :role_8, class: "form-control" %></td>
-          </tr>
-          <tr>
-            <td><p>Character 9</p></td>
-            <td><%= f.text_field :cast_9, class: "form-control" %></td>
-            <td><%= f.text_field :role_9, class: "form-control" %></td>
-          </tr>
-          <tr>
-            <td><p>Character 10</p></td>
-            <td><%= f.text_field :cast_10, class: "form-control" %></td>
-            <td><%= f.text_field :role_10, class: "form-control" %></td>
-          </tr>
-          <tr>
-            <td><p>Character 11</p></td>
-            <td><%= f.text_field :cast_11, class: "form-control" %></td>
-            <td><%= f.text_field :role_11, class: "form-control" %></td>
-          </tr>
-          <tr>
-            <td><p>Character 12</p></td>
-            <td><%= f.text_field :cast_12, class: "form-control" %></td>
-            <td><%= f.text_field :role_12, class: "form-control" %></td>
+          <td><p>Character 12</p></td>            
+            <%= f.fields_for :casts do |casts_form| %>
+              <%= render "cast_fields", f: casts_form %>
+            <% end %>
           </tr>
       </tbody>
     </table>
